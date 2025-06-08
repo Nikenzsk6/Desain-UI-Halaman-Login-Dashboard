@@ -63,6 +63,11 @@ public class f_Login extends javax.swing.JFrame {
         b_Login.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         b_Login.setText("LOGIN");
         b_Login.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        b_Login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_LoginActionPerformed(evt);
+            }
+        });
 
         b_close.setBackground(new java.awt.Color(204, 102, 255));
         b_close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/alumni_202457201057/Gambar/iconClose 25px.png"))); // NOI18N
@@ -145,6 +150,14 @@ public class f_Login extends javax.swing.JFrame {
         System.exit(0);
         
     }//GEN-LAST:event_b_closeActionPerformed
+
+    private void b_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_LoginActionPerformed
+        // TODO add your handling code here:
+        String User = t_user.getText();
+        String Pw = t_pw.getText();
+        
+        new f_dasboard().setVisible(true);
+    }//GEN-LAST:event_b_LoginActionPerformed
 
     /**
      * @param args the command line arguments
